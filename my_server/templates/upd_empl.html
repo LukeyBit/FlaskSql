@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% set doc_title = 'Update employee' %}
+{% set upd_empl_active = 'active' %}
+{% block header %}
+Update employee
+{% endblock header %}
+{% block content %}
+<h2 id="active_empl" data-manager-id="{{ active_empl[4] }}" data-department-id="{{ active_empl[5] }}">Update {{ active_empl[1] }}</h2>
+<form class="m-2 mt-3 p-2 border rounded row g-3 input-group" method="POST" action="">
+    <input type="hidden" name="empl_id" value="{{ active_empl[0] }}">
+    <div class="col-12">
+        <label for="inputName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputName" name="name" value="{{ active_empl[1] }}">
+    </div>
+    <div class="col-md-8">
+        <label for="inputNumber" class="form-label">Phone number</label>
+        <input type="tel" class="form-control" id="inputNumber" name="phone_nr" value="{{ active_empl[2] }}">
+    </div>
+    <div class="col-md-4">
+        <label for="inputSalary" class="form-label">Salary</label>
+        <input type="number" class="form-control" id="inputSalary" name="salary" value="{{ active_empl[3] }}">
+    </div>
+    <div class="col-md-4">
+        <label for="inputManager" class="form-label">Manager</label>
+        <select id="inputManager" class="form-select" name="manager">
+            <option class="manager" value="None">None</option>
+            {% for employee in employees %}
+            <option class="manager" value="{{employee[0]}}">{{employee[1]}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="inputDepartment" class="form-label">Department</label>
+        <select id="inputDepartment" class="form-select" name="department">
+            {% for department in departments %}
+            <option class="department" value="{{department[1]}}">{{department[0]}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Update employee</button>
+    </div>
+</form>
+<script src="{{ url_for('static', filename='selected.js') }}"></script>
+{% endblock content %}

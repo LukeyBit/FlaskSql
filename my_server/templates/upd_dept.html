@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% set doc_title = 'Update department' %}
+{% set upd_dept_active = 'active' %}
+{% block header %}
+Update department
+{% endblock header %}
+{% block content %}
+<form class="m-2 mt-3 p-2 border rounded row g-3 input-group" method="POST" action="">
+    <div class="col-md-4">
+        <label for="inputId" class="form-label">Department ID</label>
+        <div type="text" class="form-control" id="inputId">{{ department[0] }}</div>
+    </div>
+    <div class="col-md-8">
+        <label for="inputName" class="form-label">Department name</label>
+        <input type="text" class="form-control" id="inputName" name="name" value="{{ department[1] }}">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Update department</button>
+    </div>
+</form>
+{% endblock content %}

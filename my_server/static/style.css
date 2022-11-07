@@ -1,0 +1,36 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+:root{
+    --teal: #038C7F;
+}
+body {
+    padding-bottom:4em;
+}
+.page-header-img {
+    max-height: 6rem;
+    object-fit: cover;
+    filter: blur(1px);
+}
+.page-header-text {
+    font-size: 4rem;
+    color: white;
+    max-height: 6rem;
+}
+.card-img-overlay {
+    max-height: 6rem;
+}
+.navbar {
+    background-color: rgb(187, 232, 206);
+}
+.nav-link {
+    font-size: 1.5rem;
+    font-weight: 450;
+    color: rgb(88, 88, 88);
+}
+footer {
+    background-color: var(--teal);
+}
+.btn-primary {
+    background-color: var(--teal) !important;
+    border-color: var(--teal) !important;
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% set doc_title = 'Add department' %}
+{% set add_dept_active = 'active' %}
+{% block header %}
+Add department
+{% endblock header %}
+{% block content %}
+<form class="m-2 mt-3 p-2 border rounded row g-3 input-group" method="POST" action="">
+    <div class="col-md-4">
+        <label for="inputId" class="form-label">Department ID</label>
+        <input type="text" class="form-control" id="inputId" name="id">
+    </div>
+    <div class="col-md-8">
+        <label for="inputName" class="form-label">Department name</label>
+        <input type="text" class="form-control" id="inputName" name="name">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Add department</button>
+    </div>
+</form>
+{% endblock content %}

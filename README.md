@@ -1,4 +1,3 @@
-
 *Author: Lukas Andersson*
 
 # Employee and department management tool

@@ -1,7 +1,4 @@
-
 *Author: Lukas Andersson*
 
----
-
-# ISSUES
-1. Update control_input to flash and refresh instead of removing forbidden characters
+# Employee and department management tool
+A simple tool using Python Flask and SQLite to manage employees and departments within a company or organization.

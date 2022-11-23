@@ -16,7 +16,7 @@ employees = [
     ('Petter', '2645', 22000, 3, 'C')
 ]
 
-db = create_connection('./my_server/databases/employed.db')
+db = create_connection()
 
 cur = db.cursor()
 

@@ -1,8 +1,10 @@
-import sqlite3
+import sqlite3, os
 
-DB_PATH = './my_server/databases/employed.db'
+DB_PATH = 'my_server\databases\employed.db'
 
-def create_connection(db_file=DB_PATH):
+abs_path = os.path.join(os.getcwd(), DB_PATH)
+
+def create_connection(db_file=abs_path):
     conn = None
     try:
         conn = sqlite3.connect(db_file)
